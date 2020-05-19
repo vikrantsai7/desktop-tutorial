@@ -1,0 +1,55 @@
+<h1>Welcome!</h1>
+
+<div class="container">
+      
+    <form [formGroup]="form" (ngSubmit)="submit()">
+          
+        <div class="form-group">
+            <label for="name">Phone number:</label>
+            <input 
+                [(ngModel)]="phoneNumber"
+                formControlName="name"
+                id="name" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f.name.touched && f.name.invalid" class="alert alert-danger">
+                <div *ngIf="f.name.errors.required">Phone number is required.</div>
+                <div *ngIf="f.name.errors.minlength">Phone number should be at least 7 characters.</div>
+                <div *ngIf="f.name.errors.maxlength">Phone number max 10 characters.</div>
+                <div *ngIf="f.name.errors.pattern">Phone number should be a numerical value.</div>
+
+
+            </div>
+        </div>
+    
+      
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>
+
+
+
+
+
+
+<h1>Combination</h1>
+
+
+   <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of numberList | paginate: config">
+        <th scope="row">{{item}}</th>
+      </tr>
+    </tbody>
+  </table>
+    <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+
+
+
+
+
