@@ -6,10 +6,10 @@ Write your name on line 6, save it, and then head back to GitHub Desktop.
 Vikrant Kulkarni
 Please refer to the word document for the screenshots and more details.
 Application stack 
-•	Spring Boot
-•	Spring REST 
-•	Spring log back 
-•	Annotations used 
+â€¢	Spring Boot
+â€¢	Spring REST 
+â€¢	Spring log back 
+â€¢	Annotations used 
 @SpringBootApplication	Include build in tomcat and startup as java application for REST API
 @Configuration	Stereotype for specifying configurations 
 @Bean	Bean definitions 
@@ -20,4 +20,11 @@ Application stack
 @CrossOrigin	Allowing other origin requests to REST API
 @NonNull @Size	Validation for path variable
 @Test	Junits
+
+UI is implimented in Angular 9
+ngx-pagination is used for pagination
+FormsModule and ReactiveFormsModule for forms
+HttpClientModule is used for calling Java REST Service
+
+
 
